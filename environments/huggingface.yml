@@ -1,19 +1,16 @@
 name: koboldai
 channels:
   - pytorch
-  - nvidia
   - conda-forge
   - defaults
 dependencies:
   - colorama
-  - flask=2.2.3
-  - flask-socketio=5.3.2
-  - flask-session=0.4.0
-  - python-socketio=5.7.2
-  - pytorch=2.0.*
+  - flask-socketio
+  - flask-session
+  - pytorch::pytorch=1.12.1
   - python=3.8.*
-  - pytorch-cuda=11.8
-  - eventlet=0.33.3
+  - nvidia::cudatoolkit=11.6
+  - eventlet
   - dnspython=2.2.1
   - markdown
   - bleach=4.1.0
@@ -32,12 +29,14 @@ dependencies:
     - flask-ngrok
     - flask-cors
     - lupa==1.10
-    - transformers==4.28.*
-    - huggingface_hub==0.12.1
-    - safetensors==0.3.1
-    - accelerate==0.18.0
+    #- transformers==4.25.1
+    - huggingface_hub>=0.10.1
+    - safetensors
+    - accelerate
+    - flask-socketio==5.3.2
     - git+https://github.com/VE-FORBRYDERNE/mkultra
     - flask-session
+    - python-socketio==5.7.2
     - ansi2html
     - flask_compress
     - ijson
@@ -45,4 +44,5 @@ dependencies:
     - ftfy
     - pydub
     - diffusers
-    - peft==0.3.0
+    - git+https://github.com/younesbelkada/transformers@bnb_add_custom_map
+    #- git+https://github.com/telpirion/bitsandbytes
